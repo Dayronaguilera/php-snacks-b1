@@ -53,11 +53,11 @@
                 ]
             ],
         ];
-        for ($i=0; $i < count($posts) ; $i++) { 
-
-            echo array_keys($posts[$i]);
-
-        }
+        
+        
+        array_walk_recursive($posts, function ($item, $key) {
+            echo "$key: $item <br/>";
+        });
         
     ?>
 
